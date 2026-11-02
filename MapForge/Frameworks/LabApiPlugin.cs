@@ -18,7 +18,7 @@ namespace MapForge.Frameworks
 
         public override Version Version { get; } = new Version(BuildSettings.Version);
 
-        public override Version RequiredApiVersion { get; } = new Version(0, 4, 0);
+        public override Version RequiredApiVersion { get; } = new Version(1, 1, 7);
 
         public override void Disable()
         {

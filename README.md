@@ -1,22 +1,37 @@
-![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/Killers0992/MapForge/total?label=Downloads&labelColor=2e343e&color=00FFFF&style=for-the-badge)
-[![Discord](https://img.shields.io/discord/1216429195232673964?label=Discord&labelColor=2e343e&color=00FFFF&style=for-the-badge)](https://discord.gg/czQCAsDMHa)
-# MapForge
-Plugin which allows you to customize SCP: SL map by using spawnable objects which server can spawn.
+# MapForge (LabAPI)
 
-# Installation
-<details>
-<summary>Lab API</summary>
+MapForge lets server owners customize SCP: Secret Laboratory maps by loading bundles and spawning supported map objects.
 
-1. Download latest plugin ``MapForge.dll`` [Download](https://github.com/Killers0992/MapForge/releases/latest/download/MapForge-labapi.dll)
-2. Put ``MapForge.dll`` in folder
-  - Windows - ``%appdata%/SCP Secret Laboratory/LabAPI-Beta/plugins``
-  - Linux - ``.config/SCP Secret Laboratory/LabAPI-Beta/plugins``
-3. Download latest dependencies ``MapForgeAPI.dll``, ``0Harmony.dll`` [Download](https://github.com/Killers0992/MapForge/releases/latest/download/dependencies.zip)
-4. Extract ``dependencies.zip`` and put ``MapForgeAPI.dll`` and ``0Harmony.dll`` in folder
-  - Windows - ``%appdata%/SCP Secret Laboratory/LabAPI-Beta/dependencies``
-  - Linux - ``.config/SCP Secret Laboratory/LabAPI-Beta/dependencies``
-5. Launch SCP: SL server.
-</details>
+## This fork
 
-# Usage
-If you want to start using MapForge for map customization check [wiki page](https://github.com/Killers0992/MapForge/wiki)
+Version **1.0.8** is a LabAPI compatibility build based on [Killers0992/MapForge](https://github.com/Killers0992/MapForge). It updates the plugin for LabAPI 1.1.7, Harmony 2.4.2, and the current door permission API. The upstream author and GPL-3.0 license are preserved.
+
+Compatibility changes and this README were prepared with **OpenAI Codex**. Original MapForge code and authorship remain credited to Killers0992.
+
+## Install
+
+1. Download [`MapForge-labapi.dll`](https://raw.githubusercontent.com/Tomut0/MapForge/master/dist/MapForge-labapi.dll) and [`MapForge.API.dll`](https://raw.githubusercontent.com/Tomut0/MapForge/master/dist/MapForge.API.dll).
+2. Put `MapForge-labapi.dll` in the LabAPI `plugins/<port>/` directory.
+3. Put `MapForge.API.dll` in the LabAPI `dependencies/<port>/` directory.
+4. LabAPI 1.1.7 provides the compatible Harmony 2.4.2 dependency; do not replace the server's shared Harmony assembly with another version.
+5. Start the server. MapForge creates its own data directory under the LabAPI plugins path.
+
+## Compatibility
+
+| Component | Version |
+|---|---:|
+| SCP: Secret Laboratory dedicated server | 14.2.9 |
+| LabAPI runtime | 1.1.7.0 |
+| Harmony | 2.4.2 |
+| Plugin | 1.0.8 |
+
+Runtime load and enable were confirmed in server logs on **2026-11-02** with SCP:SL 14.2.9 and LabAPI 1.1.7.0 (test build 1.0.7). Version 1.0.8 is rebuilt from the same tested compatibility changes with the plugin version metadata incremented.
+
+## Build
+
+Build `MapForge.sln` in `LABAPI` configuration with .NET Framework 4.8 targeting tools. Set `SL_REFERENCES` to the SCP:SL and LabAPI reference assemblies. The output files are `MapForge/bin/LABAPI/MapForge-labapi.dll` and `MapForge.API/bin/LABAPI/MapForge.API.dll`.
+
+## Credits and license
+
+- Upstream project: [Killers0992/MapForge](https://github.com/Killers0992/MapForge)
+- License: [GNU GPL v3](LICENSE.txt)

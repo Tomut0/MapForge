@@ -219,12 +219,8 @@ namespace MapForge
 
                     doorInstance.TargetState = door.IsOpened;
 
-                    doorInstance.RequiredPermissions = new DoorPermissions()
-                    {
-                        RequireAll = door.RequireAllPermissions,
-                        Bypass2176 = door.Bypass2176,
-                        RequiredPermissions = door.Permissions.ToKeycardPermission(),
-                    };
+                    doorInstance.RequiredPermissions = new DoorPermissionsPolicy(
+                        door.Permissions.ToKeycardPermission(), door.RequireAllPermissions, door.Bypass2176);
                     return doorInstance.gameObject;
                 case MapForgeLocker locker:
                     Locker lockerInstance = GetLockerFromType(locker.LockerType).CreateNewInstance(locker.transform);

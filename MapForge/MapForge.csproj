@@ -30,7 +30,7 @@
           <HintPath>$(SL_REFERENCES)\LabApi.dll</HintPath>
         </Reference>
         <Reference Include="Mirror">
-            <HintPath>$(SL_REFERENCES)\Mirror-Publicized.dll</HintPath>
+            <HintPath>$(SL_REFERENCES)\Mirror.dll</HintPath>
         </Reference>
         <Reference Include="PluginAPI" Condition="'$(Configuration)' == 'NWAPI'">
             <HintPath>$(SL_REFERENCES)\PluginAPI.dll</HintPath>
@@ -45,7 +45,7 @@
 	
     <ItemGroup>
         <PackageReference Include="ExMod.Exiled" Version="9.0.0-alpha.1" Condition="'$(Configuration)' == 'EXILED'"/>
-        <PackageReference Include="Lib.Harmony" Version="2.3.3" />
+        <PackageReference Include="Lib.Harmony" Version="2.4.2" />
     </ItemGroup>
 
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(Configuration)' == 'Debug'">
