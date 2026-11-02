@@ -10,7 +10,7 @@ Compatibility changes and this README were prepared with **OpenAI Codex**. Origi
 
 ## Install
 
-1. Download [`MapForge-labapi.dll`](https://raw.githubusercontent.com/Tomut0/MapForge/master/dist/MapForge-labapi.dll) and [`MapForge.API.dll`](https://raw.githubusercontent.com/Tomut0/MapForge/master/dist/MapForge.API.dll).
+1. Download [`MapForge-labapi.dll`](https://github.com/Tomut0/MapForge/releases/latest/download/MapForge-labapi.dll) and [`MapForge.API.dll`](https://github.com/Tomut0/MapForge/releases/latest/download/MapForge.API.dll).
 2. Put `MapForge-labapi.dll` in the LabAPI `plugins/<port>/` directory.
 3. Put `MapForge.API.dll` in the LabAPI `dependencies/<port>/` directory.
 4. LabAPI 1.1.7 provides the compatible Harmony 2.4.2 dependency; do not replace the server's shared Harmony assembly with another version.
